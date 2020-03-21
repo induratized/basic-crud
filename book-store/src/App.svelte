@@ -1,11 +1,12 @@
+<Header />
+<Actions />
+<Interactive />
+<Footer />
+
 <script>
-	export let name;
+	import { Header, Footer, Actions, Interactive } from './ui-blocks'; //
 </script>
 
 <style>
-	h1 {
-		color: purple;
-	}
-</style>
 
-<h1>Hello {name}!</h1>
+</style>

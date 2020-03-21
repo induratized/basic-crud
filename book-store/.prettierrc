@@ -1,0 +1,6 @@
+{
+  "svelteSortOrder" : "markup-scripts-styles",
+  tabWidth: 4,
+  bracketSpacing: true,
+  singleQuote: true
+}

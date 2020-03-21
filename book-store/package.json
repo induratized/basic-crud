@@ -2,11 +2,20 @@
   "name": "svelte-app",
   "version": "1.0.0",
   "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.0",
+    "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.1.0",
     "cross-env": "^5.2.0",
     "css-loader": "^2.1.1",
+    "eslint": "^6.8.0",
+    "husky": "^4.2.3",
+    "lint-staged": "^10.0.8",
     "mini-css-extract-plugin": "^0.6.0",
+    "prettier": "^1.19.1",
     "serve": "^11.0.0",
     "style-loader": "^0.23.1",
+    "stylelint": "^13.2.1",
     "svelte": "^3.0.0",
     "svelte-loader": "2.13.3",
     "webpack": "^4.30.0",
@@ -17,5 +26,15 @@
     "build": "cross-env NODE_ENV=production webpack",
     "dev": "webpack-dev-server --content-base public"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": "eslint --cache --fix",
+    "*.{js,css,md}": "prettier --write",
+    "*.css": "stylelint --fix"
+  }
 }
